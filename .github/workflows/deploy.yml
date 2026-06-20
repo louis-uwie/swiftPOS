@@ -25,7 +25,8 @@ jobs:
 
       - name: Create SSL cert
         run: |
-          echo "${{ secrets.DB_SSL_CA_CONTENT }}"
+          echo "${{ secrets.DB_SSL_CA_CONTENT }}" > ${{ github.workspace }}/ca.pem
+          ls -la ${{ github.workspace }}/ca.pem
 
       - name: Run migrations
         env:
