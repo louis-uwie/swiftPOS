@@ -25,7 +25,7 @@ jobs:
 
       - name: Create SSL cert
         run: |
-          echo "${{ secrets.DB_SSL_CA_CONTENT }}" | base64 --decode > ca.pem
+          echo "${{ secrets.DB_SSL_CA_CONTENT }}" > ca.pem
 
       - name: Run migrations
         env:
