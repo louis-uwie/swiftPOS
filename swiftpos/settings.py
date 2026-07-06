@@ -30,6 +30,7 @@ SECRET_KEY = env('SECRET_KEY')
 DEBUG = env.bool('DEBUG', default=False)
 
 ALLOWED_HOSTS = [
+    os.environ.get('WEBSITE_HOSTNAME', 'localhost'),
     'swiftpos-api-c5a4buguhfd7c3a3.southeastasia-01.azurewebsites.net',
     'localhost',
     '127.0.0.1',
