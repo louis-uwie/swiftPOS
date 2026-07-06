@@ -51,9 +51,6 @@ jobs:
             --resource-group swiftpos-api_group \
             --name swiftpos-api
 
-      - name: Wait for app to start
-        run: sleep 30
-
       - name: Zip application
         run: |
           zip -r app.zip . -x "*.git*" -x "venv/*"
